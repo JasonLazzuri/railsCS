@@ -1,0 +1,72 @@
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+<div class="white">
+  <div class="jumbotron">
+    <%= image_tag ('barb.png'), :style => "align: middle" %>
+    <div class="banner">
+      <h2>CLASH OF CLANS
+        <br>
+        STATS FINDER</h2>
+      <h5 align="middle">Lookup stats about your Clan or Individual Player Info</h5>
+    </div>
+  </div>
+
+  <br>
+  <br>
+</div>
+
+
+<div class="parallax"></div>
+
+  <!--Lookup Bars   -->
+<div class="white">
+
+<div class="container">
+  <br>
+  <br>
+  <h3>Search</h3>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">search</i>
+          <input id="icon_prefix" type="text" class="validate" #clanInput>
+          <label class="active" for="icon_prefix">Enter Your Clan Tag</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="perm_identity" type="tel" class="validate" #playerInput>
+          <label class="active" for="perm_identity">Enter Your Player Tag</label>
+        </div>
+      </div>
+      <button id="button"class="btn waves-effect waves-light blue darken-2" (click)='navigateToPlayer(playerInput.value, clanInput.value)'>Submit
+        <i class="material-icons right"></i>
+      </button>
+    </form>
+  </div>
+</div>
+<br>
+<br>
+
+</div>
+
+<div class="parallax2"></div>
+
+
+<!--Goblin Image and Twitter Feeds Below  -->
+<div class="container">
+  <%= image_tag ('goblin.png'), :class => 'gob' %>
+  <h3 style="text-align: center">Stay in Touch</h3>
+
+  <div id='twitter-row'>
+    <div id="clash"class="z-depth-5 col s4">
+      <a class="twitter-timeline"  href="https://twitter.com/hashtag/ClashOfClans" data-widget-id="876903261403455489">#ClashOfClans Tweets</a>
+    </div>
+
+    <div id="supercell" class="z-depth-5 col s4">
+      <a class="twitter-timeline"  href="https://twitter.com/hashtag/supercell" data-widget-id="876884800203706373">#supercell Tweets</a>
+    </div>
+  </div>
+</div>

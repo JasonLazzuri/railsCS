@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clash</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/icon?family=Material+Icons" %>
+
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+    <nav class="blue darken-3" id='top-bar'>
+      <div class="nav-wrapper container">
+        <%= image_tag ('clash.png'), :class => 'home' %>
+      </div>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>
