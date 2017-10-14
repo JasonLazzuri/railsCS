@@ -1,0 +1,231 @@
+<div class="container">
+  <img id="character"src="{{imgStr}}" alt="" />
+
+  <h3>Name: <%= @player['name'] %></h3>
+  <h5>Tag: <%= @player['tag'] %></h5>
+
+  <div class="league">
+  <% if @player['league']['name'].nil? %>
+    <h5>League: N/A</h5>
+  <% else %>
+    <h5>League: <%= @player['league']['name'] %>
+        <img id="league" src="<%= @player['league']['iconUrls']['medium']%>" alt="">
+    </h5>
+  <% end %>
+  </div>
+
+
+  <h5>Townhall Level: <%= @player['townHallLevel'] %>
+    <%= image_tag (@player['townHallLevel'].to_s + '.png'), :id => 'league' %>
+  </h5>
+
+  <h5>Experience Level: <%= @player['expLevel'] %>
+    <%= image_tag ('XP.png'), :id => 'XP' %>
+  </h5>
+
+  <h5>Clan Name: <%= @player['clan']['name'] %>
+    <img id="league" src="<%= @player['clan']['badgeUrls']['medium'] %>" alt=""></h5>
+  </h5>
+
+  <hr>
+    <div class="row">
+      <div class="col s2 info-badge">
+            <span class="flow-text"><b>Trophy<br>Count</b></span>
+      </div>
+
+      <div class="col s2 info-badge">
+            <span class="flow-text"><b>War<br> Stars</b></span>
+      </div>
+
+      <div class="col s2 info-badge ">
+            <span class="flow-text"><b>Attack <br>Wins</b></span>
+      </div>
+
+      <div class="col s2 info-badge ">
+            <span class="flow-text"><b>Defense<br>Wins</b></span>
+      </div>
+
+      <div class="col s2 info-badge ">
+            <span class="flow-text"><b>Troops<br>Donated</b></span>
+      </div>
+
+      <div class="col s2 info-badge ">
+            <span class="flow-text"><b>Troops<br>Received</b></span>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col s2">
+          <span class="flow-text">
+            <%= image_tag ('trophy.png'), :id => 'XP' %>
+            <%= @player['trophies'] %>
+          </span>
+        </div>
+
+      <div class="col s2 ">
+        <span class="flow-text">
+          <%= image_tag ('stars.png'), :id => 'XP' %>
+          <%= @player['warStars'] %>
+        </span>
+      </div>
+
+      <div class="col s2 ">
+        <span class="flow-text">
+          <%= @player['attackWins'] %></span>
+      </div>
+
+      <div class="col s2 ">
+        <span class="flow-text">
+          <%= @player['defenseWins'] %>
+        </span>
+      </div>
+
+      <div class="col s2 ">
+        <span class="flow-text">
+          <%= @player['donations'] %>
+        </span>
+      </div>
+
+
+      <div class="col s2 ">
+        <span class="flow-text">
+          <%= @player['donationsReceived'] %>
+        </span>
+      </div>
+    </div>  <!-- First row of stats row -->
+
+</div>
+
+<!-- PLayer Bests Section -->
+<div class="container">
+    <h3>Player Bests</h3>
+    <hr>
+    <div class="row">
+        <div class="col s2 info-badge">
+            <span class="flow-text"><b>Highest<br> Trophy<br>Count</b></span>
+        </div>
+        <div class="col s2 info-badge">
+            <span class="flow-text"><b>Best<br> Versus<br> Trophies</b></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s2">
+            <span class="flow-text">
+                <%= image_tag ('trophy.png'), :id => 'XP' %>
+                <%= @player['bestTrophies'] %>
+            </span>
+        </div>
+
+        <div class="col s2 ">
+            <span class="flow-text">
+                <%= image_tag ('trophy.png'), :id => 'XP' %>
+
+                <%= @player['bestVersusTrophies'] %>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- Achievements Section -->
+<div class="container">
+    <h3>Achievements</h3>
+  <hr>
+  <div class="row">
+    <div class="col s2 info-badge"><span class="flow-text"><b>Obstacles<br>Removed</b></span></div>
+    <div class="col s2 info-badge"><span class="flow-text"><b>Gold<br> Looted</b></span></div>
+    <div class="col s2 info-badge"><span class="flow-text"><b>Elixir<br> Looted</b></span></div>
+    <div class="col s2 info-badge"><span class="flow-text"><b>Walls<br> Destroyed</b></span></div>
+    <div class="col s2 info-badge"><span class="flow-text"><b>Town Halls<br> Destroyed</b></span></div>
+    <div class="col s2 info-badge"><span class="flow-text"><b>Dark Elixer Looted</b></span></div>
+  </div>
+
+  <div class="row">
+
+      <div class="col s2">
+          <span class="flow-text">
+              <%= number_with_delimiter(@player['achievements'][3]['value']) %> /
+              <%= number_with_delimiter(@player['achievements'][3]['target']) %>
+          </span>
+      </div>
+
+      <div class="col s2">
+          <span class="flow-text" style="font-size:18px;">
+              <%= number_with_delimiter(@player['achievements'][5]['value']) %> /
+              <%= number_with_delimiter(@player['achievements'][5]['target']) %>
+          </span>
+      </div>
+
+      <div class="col s2">
+          <span class="flow-text" style="font-size:18px;">
+              <%= number_with_delimiter(@player['achievements'][6]['value']) %> /
+              <%= number_with_delimiter(@player['achievements'][6]['target']) %>
+          </span>
+      </div>
+
+      <div class="col s2">
+          <span class="flow-text" style="font-size:18px;">
+            <%= number_with_delimiter(@player['achievements'][9]['value']) %> /
+            <%= number_with_delimiter(@player['achievements'][9]['target']) %>
+          </span>
+      </div>
+
+      <div class="col s2">
+          <span class="flow-text" style="font-size:18px;">
+            <%= number_with_delimiter(@player['achievements'][10]['value']) %> /
+            <%= number_with_delimiter(@player['achievements'][10]['target']) %>
+          </span>
+      </div>
+
+      <div class="col s2">
+          <span class="flow-text" style="font-size:18px;">
+            <%= number_with_delimiter(@player['achievements'][16]['value']) %> /
+            <%= number_with_delimiter(@player['achievements'][16]['target']) %>
+          </span>
+      </div>
+
+  </div><!-- end row  -->
+</div><!-- end container  -->
+
+<!--  Troop Spells Heroes section -->
+<div class="container">
+  <hr>
+  <h3>Troops</h3>
+
+  <div class="row">
+      <div class="col m12">
+          <% @player['troops'].each do |troop| %>
+              <div class="col">
+                  <% if troop['village'] == 'home' %>
+                      <%= image_tag (troop['name'] + '.png'), :class => 'icon' %>
+                      <h5 class='level'><%=troop['level']%></h5>
+                  <% end %>
+              </div>
+          <% end %>
+      </div>
+  </div>
+
+  <h3>Spells</h3>
+  <div class="row">
+        <% @player['spells'].each do |spell| %>
+            <div class="col">
+                <% if spell['village'] == 'home' %>
+                    <%= image_tag (spell['name'] + '_icon.png'), :class => 'icon' %>
+                    <h5 class='level'><%=spell['level']%></h5>
+                <% end %>
+            </div>
+        <% end %>
+  </div>
+
+  <h3>Heroes</h3>
+      <div class="row">
+            <% @player['heroes'].each do |hero| %>
+                  <div class="col">
+                        <% if hero['village'] == 'home' %>
+                            <%= image_tag (hero['name'] + '.png'), :class => 'icon' %>
+                            <h5 class='level'><%=hero['level']%></h5>
+                        <% end %>
+                  </div>
+            <% end %>
+      </div>
+</div><!-- end container  -->
