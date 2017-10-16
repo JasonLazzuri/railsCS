@@ -1,1 +1,89 @@
-this is my clan page
+<div class="container">
+
+<%= image_tag (@clan['badgeUrls']['large']), :id => 'shield'  %>
+
+  <h3>Clan Name: <%= @clan['name'] %></h3>
+  <h5>Clan Slogan: <%=  @clan['description'] %></h5>
+  <h5>Clan Level: <%=  @clan['level'] %></h5>
+  <hr>
+  <div class="row">
+    <div class="col s2 info-badge"><span class="flow-text"><b>Clan<br>Points</b></span></div>
+    <div class="col s2 info-badge"><span class="flow-text"><b>War<br> Win Streak</b></span></div>
+    <div class="col s2 info-badge "><span class="flow-text"><b>War <br>Wins</b></span></div>
+    <div class="col s2 info-badge "><span class="flow-text"><b>Clan<br>Vs Points</b></span></div>
+    <div class="col s2 info-badge "><span class="flow-text"><b>Clan<br>Members</b></span></div>
+  </div>
+  <div class="row">
+    <div class="col s2 "><span class="flow-text"> <%=  @clan['clanPoints'] %></span></div>
+    <div class="col s2 "><span class="flow-text"> <%=  @clan['warWinStreak'] %></span></div>
+    <div class="col s2 "><span class="flow-text"><%=  @clan['warWins'] %></span></div>
+    <div class="col s2 "><span class="flow-text"><%=  @clan['clanVersusPoints'] %></span></div>
+    <div class="col s2 "><span class="flow-text"><%=  @clan['members'] %></span></div>
+  </div>
+  <hr>
+</div>
+  <div class="container z-depth-4" style="padding:20px;">
+    <%= image_tag ('HealerFigure.png'), :id => 'healer' %>
+    <h3 >Clan Members</h3>
+    <div class="row">
+      <div class="col s2 "><span class="flow-text">Player Name</span></div>
+      <div class="col s2 "><span class="flow-text">Experience Level</span></div>
+      <div class="col s2 "><span class="flow-text">Donated Troops</span></div>
+      <div class="col s2 "><span class="flow-text">Donations <br>Received</span></div>
+      <div class="col s2 "><span class="flow-text">Trophies</span></div>
+      <div class="col s2 "><span class="flow-text">Versus Trophies</span></div>
+    </div>
+    <!-- loop through the clan members -->
+
+    <% @clan['memberList'].each do |member| %>
+    <div class="row hoverable">
+      <div class="col s2 ">
+          <span class="flow-text">
+              <a href="/players/?playerInput=<%= member['tag'][1..8].to_s%>">
+              <%=  member['name'].to_s %></a>
+          </span>
+      </div>
+
+      <div class="col s2 ">
+          <span class="flow-text">
+              <%=  member['expLevel'].to_s %>
+          </span>
+      </div>
+
+      <div class="col s2 ">
+          <span class="flow-text">
+            <%=  member['donations'].to_s %>
+          </span>
+      </div>
+
+      <div class="col s2 ">
+          <span class="flow-text">
+              <%=  member['donationsReceived'].to_s %>
+          </span>
+      </div>
+
+      <div class="col s2 ">
+          <span class="flow-text">
+              <%=  member['trophies'].to_s %>
+          </span>
+      </div>
+
+      <div class="col s2 ">
+          <span class="flow-text">
+            <%=  member['versusTrophies'].to_s %>
+          </span>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+
+
+
+<%= image_tag ('barbed.png'), :id => 'barb' %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

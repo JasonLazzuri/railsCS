@@ -7,8 +7,13 @@ class PlayersController < ApplicationController
 
     @player = JSON.parse(@response)
 
+    image_array = ['BowlerFigure.png','DragonFigure.png','GiantFigure.png','HogRiderFigure.png','LavaHoundFigure.png','PEKKAFigure.png']
 
-    binding.pry
+    @random = image_array[rand(0..5)]
+    array = @player['clan']['tag']
+
+    @clanTag = array[1..8]
+
   end
 
 
