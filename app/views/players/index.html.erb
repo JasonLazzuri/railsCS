@@ -5,7 +5,7 @@
   <h5>Tag: <%= @player['tag'] %></h5>
 
   <div class="league">
-  <% if @player['league']['name'].nil? %>
+  <% if @player['league'].nil? %>
     <h5>League: N/A</h5>
   <% else %>
     <h5>League: <%= @player['league']['name'] %>
@@ -21,7 +21,7 @@
   <h5>Experience Level: <%= @player['expLevel'] %>
     <%= image_tag ('XP.png'), :id => 'XP' %>
   </h5>
-  <h5>Clan Name: <%= @player['clan']['name'] %> <a href="?clanInput=<%= @clanTag.to_s %>"><%= @player['clan']['tag']%></a>
+  <h5>Clan Name: <%= @player['clan']['name'] %> <a href="/clans/?clanInput=<%= @clanTag.to_s %>"><%= @player['clan']['tag']%></a>
     <img id="league" src="<%= @player['clan']['badgeUrls']['medium'] %>" alt=""></h5>
   </h5>
   <hr>
