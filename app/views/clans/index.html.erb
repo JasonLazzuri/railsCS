@@ -1,10 +1,10 @@
 <div class="container">
 
-<%= image_tag (@clan['badgeUrls']['large']), :id => 'shield'  %>
+<%= image_tag (@tag['badgeUrls']['large']), :id => 'shield'  %>
 
-  <h3>Clan Name: <%= @clan['name'] %></h3>
-  <h5>Clan Slogan: <%=  @clan['description'] %></h5>
-  <h5>Clan Level: <%=  @clan['level'] %></h5>
+  <h3>Clan Name: <%= @tag['name'] %></h3>
+  <h5>Clan Slogan: <%=  @tag['description'] %></h5>
+  <h5>Clan Level: <%=  @tag['clanLevel'] %></h5>
   <hr>
   <div class="row">
     <div class="col s2 info-badge"><span class="flow-text"><b>Clan<br>Points</b></span></div>
@@ -14,11 +14,11 @@
     <div class="col s2 info-badge "><span class="flow-text"><b>Clan<br>Members</b></span></div>
   </div>
   <div class="row">
-    <div class="col s2 "><span class="flow-text"> <%=  @clan['clanPoints'] %></span></div>
-    <div class="col s2 "><span class="flow-text"> <%=  @clan['warWinStreak'] %></span></div>
-    <div class="col s2 "><span class="flow-text"><%=  @clan['warWins'] %></span></div>
-    <div class="col s2 "><span class="flow-text"><%=  @clan['clanVersusPoints'] %></span></div>
-    <div class="col s2 "><span class="flow-text"><%=  @clan['members'] %></span></div>
+    <div class="col s2 "><span class="flow-text"> <%=  @tag['clanPoints'] %></span></div>
+    <div class="col s2 "><span class="flow-text"> <%=  @tag['warWinStreak'] %></span></div>
+    <div class="col s2 "><span class="flow-text"><%=  @tag['warWins'] %></span></div>
+    <div class="col s2 "><span class="flow-text"><%=  @tag['clanVersusPoints'] %></span></div>
+    <div class="col s2 "><span class="flow-text"><%=  @tag['members'] %></span></div>
   </div>
   <hr>
 </div>
@@ -35,11 +35,11 @@
     </div>
     <!-- loop through the clan members -->
 
-    <% @clan['memberList'].each do |member| %>
+    <% @clan['items'].each do |member| %>
     <div class="row hoverable">
       <div class="col s2 ">
           <span class="flow-text">
-              <a href="/players/?playerInput=<%= member['tag'][1..8].to_s%>">
+              <a href="/players/?playerInput=<%= member['tag'][1..9].to_s%>">
               <%=  member['name'].to_s %></a>
           </span>
       </div>
