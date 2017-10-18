@@ -21,8 +21,12 @@
   <h5>Experience Level: <%= @player['expLevel'] %>
     <%= image_tag ('XP.png'), :id => 'XP' %>
   </h5>
-  <h5>Clan Name: <%= @player['clan']['name'] %> <a href="/clans/?clanInput=<%= @clanTag.to_s %>"><%= @player['clan']['tag']%></a>
-    <img id="league" src="<%= @player['clan']['badgeUrls']['medium'] %>" alt=""></h5>
+  <h5>Clan Name: <%= @player['name'] %> <a href="/clans/?clanInput=<%= @clanTag.to_s %>"><%= @player['tag']%></a>
+    <% if @player['clan'].nil? %>
+      No Clan
+      <% else %>
+      <img id="league" src="<%= @player['clan']['badgeUrls']['medium'] %>" alt=""></h5>
+    <% end %>
   </h5>
   <hr>
     <div class="row">

@@ -11,12 +11,11 @@ class PlayersController < ApplicationController
 
     @random = image_array[rand(0..5)]
 
-    if @player['clan']['tag'].length == 10
-      array = @player['clan']['tag']
+    if @player['tag'].length == 10
+      array = @player['tag']
       @clanTag = array[1..9]
-      binding.pry
-    elsif @player['clan']['tag'].length == 9
-      array = @player['clan']['tag']
+    elsif @player['tag'].length == 9
+      array = @player['tag']
       @clanTag = array[1..8]
     end
   end
