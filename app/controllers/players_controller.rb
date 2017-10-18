@@ -2,6 +2,7 @@ class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
 
   def index
+
     @input = params['playerInput']
     @response = RestClient.get 'https://api.clashofclans.com/v1/players/%23'+ @input, {:Authorization => 'Bearer ' + ENV["clashAPI"]  , :content_type => :json}
 
@@ -18,6 +19,7 @@ class PlayersController < ApplicationController
       array = @player['tag']
       @clanTag = array[1..8]
     end
+
   end
 
 
