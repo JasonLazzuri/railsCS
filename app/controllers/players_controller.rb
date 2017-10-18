@@ -4,6 +4,11 @@ class PlayersController < ApplicationController
   def index
 
     @input = params['playerInput']
+
+    if params['playerInput'][0] == '#'
+      @input = params['playerInput'][1..8]
+    end
+
     @response = RestClient.get 'https://api.clashofclans.com/v1/players/%23'+ @input, {:Authorization => 'Bearer ' + ENV["clashAPI"]  , :content_type => :json}
 
     @player = JSON.parse(@response)
@@ -12,11 +17,13 @@ class PlayersController < ApplicationController
 
     @random = image_array[rand(0..5)]
 
-    if @player['tag'].length == 10
-      array = @player['tag']
+    if @player['clan'].nil?
+
+    elsif@player['clan']['tag'].length == 10
+      array = @player['clan']['tag']
       @clanTag = array[1..9]
-    elsif @player['tag'].length == 9
-      array = @player['tag']
+    elsif @player['clan']['tag'].length == 9
+      array = @player['clan']['tag']
       @clanTag = array[1..8]
     end
 
