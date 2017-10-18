@@ -26,7 +26,6 @@
     <h5>Clan: No Clan</h5>
   <% else %>
     <h5>Clan Name: <%= @player['name'] %> <a href="/clans/?clanInput=<%= @clanTag.to_s %>"><%= @player['tag']%></a>
-        No Clan
         <img id="league" src="<%= @player['clan']['badgeUrls']['medium'] %>" alt=""></h5>
     </h5>
   <% end %>
