@@ -9,7 +9,15 @@ class PlayersController < ApplicationController
       @input = params['playerInput'][1..8]
     end
 
-    @response = RestClient.get 'https://api.clashofclans.com/v1/players/%23'+ @input, {:Authorization => 'Bearer ' + ENV["clashAPI"]  , :content_type => :json}
+    @response = RestClient.get 'https://api.clashofclans.com/v1/players/%23'+ @input, {:Authorization => 'Bearer ' + ENV["clashAPI"]  , :content_type => :json}{ |response, request, result, &block|
+      case response.code
+      when 200
+        @response = response
+      when 404
+        redirect_to root_path, notice: 'Not a valid player tag, try again'
+        return
+      end
+    }
 
     @player = JSON.parse(@response)
 
