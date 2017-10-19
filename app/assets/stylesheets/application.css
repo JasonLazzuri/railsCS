@@ -137,7 +137,6 @@ img {
 }
 
 h1, h3, h5{
-  text-align: center;
   font-family: clashfont;
   opacity: 1;
   padding: 15px;
@@ -187,5 +186,49 @@ padding-right: 5px;
 }
 
 @media screen and (min-width 768px){
+
+}
+
+.slider .slides {
+   background-color: none;
+   margin: 0;
+   height: 400px;
+}
+
+.white .slider .slides li img {
+    height: 110%;
+    width: 100%;
+    background-position: center;
+    background-size:100% auto;
+    background-repeat: no-repeat;
+}
+
+.slider .indicators .indicator-item {
+  background-color: #666666;
+  border: 3px solid #ffffff;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.slider .indicators .indicator-item.active {
+  background-color: #ffffff;
+}
+.slider .indicators {
+  bottom: 60px;
+  z-index: 100;
+}
+
+.slider{
+  color: black;
+  text-shadow:
+    5px 5px 0 #000,
+  -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.slides img{
+  filter: brightness(80%) contrast(70%);
 
 }

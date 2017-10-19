@@ -1,5 +1,16 @@
+<script>
+$(document).ready(function(){
+ $('.slider').slider({
+   full_width: true
+ });
+
+});
+
+
+</script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 
 
 
@@ -61,6 +72,40 @@
 </div><!--end class="white" div -->
 <div class="parallax2"></div>
 
+
+<div class="white">
+  <%= image_tag ('barbed'), :id => 'healer' %>
+  <%= image_tag ('banner1'), :style => 'margin-top:-110px' %>
+  <div class="slider">
+    <ul class="slides z-depth-3 card-panel hoverable">
+      <li>
+        <%= image_tag ('image1.png') %>
+        <div class="caption left-align" style="margin-left:-100px; ">
+          <h3>CLICK ON YOUR</h3>
+          <h5 class="">CLAN CASTLE</h5>
+        </div>
+      </li>
+      <li>
+        <%= image_tag ('image2.png') %>
+        <div class="caption right-align" style="margin-left:100px;">
+          <h3>FIND YOUR NAME</h3>
+          <h5 class="">CLICK PROFILE</h5>
+        </div>
+      </li>
+      <li>
+        <%= image_tag ('image3.png') %>
+        <div class="caption right-align" style="margin-left:100px;">
+          <h3>CLICK THE ICON</h3>
+          <h5 class="">AND CLICK COPY</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
 
 <!--Goblin Image and Twitter Feeds Below  -->
 <div class="container">
