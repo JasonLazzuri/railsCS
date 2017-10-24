@@ -239,3 +239,9 @@ h1.active,h2.active,h3.active,h4.active,h5.active{
 .parallax.active, .parallax2.active{
   background-image: url('https://i.imgur.com/rcJkFxF.jpg');
 }
+
+#pic2{
+  width: 100%;
+  margin-top: 5px;
+
+}

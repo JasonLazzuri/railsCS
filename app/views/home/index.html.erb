@@ -3,6 +3,8 @@
    $('.slider').slider({
      full_width: true
     });
+    $("#newpic").hide();
+
   });
 </script>
 
@@ -18,20 +20,28 @@ $(document).ready(function() {
     $("h5").toggleClass("active");
     $(".parallax").toggleClass("active");
     $(".parallax2").toggleClass("active");
+    $("#pic1").toggle();
+    $("#newpic").toggle();
+
+
   });
 });
 </script>
 
 
-
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
 
 
 <div class="white">
   <div class="jumbotron">
-    <%= image_tag ('barb.png'), :style => "align: middle" %>
+    <div id="newpic">
+      <%= image_tag ('h1.jpg'), :id => 'pic2', :style => "align: middle"  %>
+      <h3 style="text-align: center;
+    position: relative;
+    bottom: 30vh;">Halloween Mode Activated!</h3>
+
+    </div>
+    <%= image_tag ('barb.png'), :id => 'pic1', :style => "align: middle" %>
     <div class="banner">
       <h2>CLASH OF CLANS
         <br>
