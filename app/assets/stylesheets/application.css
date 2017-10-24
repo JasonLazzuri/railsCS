@@ -67,8 +67,9 @@ h3{
 .parallax {
   position: relative;
     /* The image used */
-    background-image: url('http://www.onehiveclan.com/uploads/2/8/8/6/28864503/wiz_bunny_hd.jpg');
+    background-image: url('https://i.imgur.com/rcJkFxF.jpg');
 
+   /*http://www.onehiveclan.com/uploads/2/8/8/6/28864503/wiz_bunny_hd.jpg*/
     /* Full height */
     min-height: 300px;
 
@@ -91,7 +92,7 @@ body, html {
 .parallax2 {
   position: relative;
     /* The image used */
-    background-image: url('http://www.onehiveclan.com/uploads/2/8/8/6/28864503/wiz_bunny_hd.jpg');
+    background-image: url('https://i.imgur.com/rcJkFxF.jpg');
 
     /* Full height */
     min-height: 300px;

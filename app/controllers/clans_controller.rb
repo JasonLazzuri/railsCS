@@ -44,7 +44,7 @@ class ClansController < ApplicationController
 
         when 200
           @response = response
-          
+
         when 404
           redirect_to root_path, notice: 'Not a valid clan tag, try again'
           return
@@ -56,6 +56,7 @@ class ClansController < ApplicationController
       @tag = JSON.parse(@url)
       @clan = JSON.parse(@response)
     end
+    
   end
 
   private

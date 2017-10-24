@@ -25,6 +25,7 @@ class PlayersController < ApplicationController
 
     @random = image_array[rand(0..5)]
 
+
     if @player['clan'].nil?
 
     elsif@player['clan']['tag'].length == 10
