@@ -243,5 +243,17 @@ h1.active,h2.active,h3.active,h4.active,h5.active{
 #pic2{
   width: 100%;
   margin-top: 5px;
+}
 
+#mode{
+  color: white;
+  text-shadow:
+    5px 5px 0 #000,
+  -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-align: center;
+  position: relative;
+  bottom: 30vh;
 }
