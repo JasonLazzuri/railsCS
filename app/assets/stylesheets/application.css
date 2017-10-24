@@ -67,7 +67,7 @@ h3{
 .parallax {
   position: relative;
     /* The image used */
-    background-image: url('https://i.imgur.com/rcJkFxF.jpg');
+    background-image: url('http://www.onehiveclan.com/uploads/2/8/8/6/28864503/wiz_bunny_hd.jpg');
 
    /*http://www.onehiveclan.com/uploads/2/8/8/6/28864503/wiz_bunny_hd.jpg*/
     /* Full height */
@@ -80,9 +80,7 @@ h3{
     background-size: cover;
 }
 
-.white{
-  background-color: white;
-}
+
 
 body, html {
     height: 100%;
@@ -92,7 +90,7 @@ body, html {
 .parallax2 {
   position: relative;
     /* The image used */
-    background-image: url('https://i.imgur.com/rcJkFxF.jpg');
+    background-image: url('http://www.onehiveclan.com/uploads/2/8/8/6/28864503/wiz_bunny_hd.jpg');
 
     /* Full height */
     min-height: 300px;
@@ -186,10 +184,6 @@ padding-right: 5px;
   margin-right: auto;
 }
 
-@media screen and (min-width 768px){
-
-}
-
 .slider .slides {
    background-color: none;
    margin: 0;
@@ -232,4 +226,16 @@ padding-right: 5px;
 .slides img{
   filter: brightness(80%) contrast(70%);
 
+}
+
+
+html.active, .white.active{
+  background-color: black !important;
+}
+h1.active,h2.active,h3.active,h4.active,h5.active{
+  color: white;
+}
+
+.parallax.active, .parallax2.active{
+  background-image: url('https://i.imgur.com/rcJkFxF.jpg');
 }

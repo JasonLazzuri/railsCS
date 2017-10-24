@@ -3,9 +3,8 @@
   <head>
     <title>ClashStop.com</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag "http://fonts.googleapis.com/icon?family=Material+Icons" %>
-
     <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" %>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/icon?family=Material+Icons" %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,8 +14,13 @@
     <nav class="blue darken-3" id='top-bar'>
       <div class="nav-wrapper container">
         <a href="/"> <%= image_tag ('clash.png'), :class => 'home' %></a>
+        <div class="right">
+          <button class="btn waves-effect halloween" name="button">Halloween Mode</button>
+        </div>
       </div>
     </nav>
+
+
 
     <%= yield %>
   </body>

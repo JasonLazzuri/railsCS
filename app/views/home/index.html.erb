@@ -1,12 +1,28 @@
 <script>
-$(document).ready(function(){
- $('.slider').slider({
-   full_width: true
- });
-
-});
-
+  $(document).ready(function(){
+   $('.slider').slider({
+     full_width: true
+    });
+  });
 </script>
+
+<script>
+$(document).ready(function() {
+  $(".halloween").click(function() {
+    $("html").toggleClass("active");
+    $(".white").toggleClass("active");
+    $("h1").toggleClass("active");
+    $("h2").toggleClass("active");
+    $("h3").toggleClass("active");
+    $("h4").toggleClass("active");
+    $("h5").toggleClass("active");
+    $(".parallax").toggleClass("active");
+    $(".parallax2").toggleClass("active");
+  });
+});
+</script>
+
+
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
@@ -36,7 +52,7 @@ $(document).ready(function(){
     <div class="container">
       <br>
       <br>
-      <h3>Search</h3>
+      <h3 style="text-align:center">Search</h3>
       <h5><%= notice %></h5>
       <div class="row">
         <div class="col s12">
