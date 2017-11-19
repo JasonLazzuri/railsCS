@@ -14,9 +14,11 @@
     <nav class="blue darken-3" id='top-bar'>
       <div class="nav-wrapper container">
         <a href="/"> <%= image_tag ('clash.png'), :class => 'home' %></a>
-        <div class="right">
-          <button class="btn waves-effect halloween" name="button">Halloween Mode</button>
-        </div>
+        <% if (params['playerInput']).nil? && (params['clanInput']).nil? %>
+          <div class="right">
+            <!-- <button class="btn waves-effect halloween" name="button">Halloween Mode</button> -->
+          </div>
+        <% end %>
       </div>
     </nav>
 

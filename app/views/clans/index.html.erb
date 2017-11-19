@@ -2,10 +2,12 @@
 
 <%= image_tag (@tag['badgeUrls']['large']), :id => 'shield'  %>
 
-  <h3>Clan Name: <%= @tag['name'] %></h3>
-  <h5>Clan Slogan: <%=  @tag['description'] %></h5>
-  <h5>Clan Level: <%=  @tag['clanLevel'] %></h5>
-  <hr>
+<div style="text-align:center;">
+    <h3>Clan Name: <%= @tag['name'] %></h3>
+    <h5>Clan Slogan: <%=  @tag['description'] %></h5>
+    <h5>Clan Level: <%=  @tag['clanLevel'] %></h5>
+    <hr>
+</div>
   <div class="row">
     <div class="col s2 info-badge"><span class="flow-text"><b>Clan<br>Points</b></span></div>
     <div class="col s2 info-badge"><span class="flow-text"><b>War<br> Win Streak</b></span></div>
