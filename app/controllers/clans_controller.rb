@@ -56,7 +56,9 @@ class ClansController < ApplicationController
       @tag = JSON.parse(@url)
       @clan = JSON.parse(@response)
     end
-    
+
+
+
   end
 
   private

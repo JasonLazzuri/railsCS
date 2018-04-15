@@ -36,6 +36,16 @@ class PlayersController < ApplicationController
       @clanTag = array[1..8]
     end
 
+
+    url = URI("http://api.cr-api.com/player/9uc8l0c")
+
+    http = Net::HTTP.new(url.host, url.port)
+
+    request = Net::HTTP::Get.new(url)
+    request["auth"] = '34f0d41c6f83405ca98196a91bef1b4a891c7b04a48749359b42b07bf4a23642'
+
+    response = http.request(request)
+    @royale = JSON.parse(response.read_body)
   end
 
 
