@@ -28,7 +28,7 @@ class PlayersController < ApplicationController
 
     if @player['clan'].nil?
 
-    elsif@player['clan']['tag'].length == 10
+    elsif @player['clan']['tag'].length == 10
       array = @player['clan']['tag']
       @clanTag = array[1..9]
     elsif @player['clan']['tag'].length == 9
@@ -37,15 +37,15 @@ class PlayersController < ApplicationController
     end
 
 
-    url = URI("http://api.cr-api.com/player/9uc8l0c")
-
-    http = Net::HTTP.new(url.host, url.port)
-
-    request = Net::HTTP::Get.new(url)
-    request["auth"] = '34f0d41c6f83405ca98196a91bef1b4a891c7b04a48749359b42b07bf4a23642'
-
-    response = http.request(request)
-    @royale = JSON.parse(response.read_body)
+    # url = URI("http://api.cr-api.com/player/9uc8l0c")
+    #
+    # http = Net::HTTP.new(url.host, url.port)
+    #
+    # request = Net::HTTP::Get.new(url)
+    # request["auth"] = '34f0d41c6f83405ca98196a91bef1b4a891c7b04a48749359b42b07bf4a23642'
+    #
+    # response = http.request(request)
+    # @royale = JSON.parse(response.read_body)
   end
 
 
