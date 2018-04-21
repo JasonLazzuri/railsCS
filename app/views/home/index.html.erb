@@ -8,6 +8,7 @@
   });
 </script>
 
+
 <script>
 $(document).ready(function() {
   $(".halloween").click(function() {
@@ -22,10 +23,28 @@ $(document).ready(function() {
     $(".parallax2").toggleClass("active");
     $("#pic1").toggle();
     $("#newpic").toggle();
-
+    // <div id="newpic">
+    //   <%= image_tag ('h1.jpg'), :id => 'pic2', :style => "align: middle"  %>
+    //   <h3 id="mode">Halloween Mode Activated!</h3>
+    // </div>
 
   });
 });
+</script>
+
+<script>
+$(document).ready(function() {
+       $('.dropdown-button').dropdown({
+         inDuration: 300,
+         outDuration: 225,
+         constrain_width: false, // Does not change width of dropdown to that of the activator
+         hover: false, // Activate on click
+         alignment: 'left', // Aligns dropdown to left or right edge (works with constrain_width)
+         gutter: 0, // Spacing from edge
+         belowOrigin: false // Displays dropdown below the button
+       });
+   });
+
 </script>
 
 
@@ -34,12 +53,8 @@ $(document).ready(function() {
 
 <div class="white">
   <div class="jumbotron">
-    <div id="newpic">
-      <%= image_tag ('h1.jpg'), :id => 'pic2', :style => "align: middle"  %>
-      <h3 id="mode">Halloween Mode Activated!</h3>
-    </div>
-    <%= image_tag ('barb.png'), :id => 'pic1', :style => "align: middle" %>
 
+    <%= image_tag ('barb.png'), :id => 'pic1', :style => "align: middle" %>
     <div class="banner">
       <h2>CLASH OF CLANS
         <br>

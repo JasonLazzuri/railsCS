@@ -257,3 +257,7 @@ h1.active,h2.active,h3.active,h4.active,h5.active{
   position: relative;
   bottom: 30vh;
 }
+
+.login{
+  padding:10px;
+}
