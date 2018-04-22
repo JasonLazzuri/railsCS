@@ -259,5 +259,9 @@ h1.active,h2.active,h3.active,h4.active,h5.active{
 }
 
 .login{
-  padding:10px;
+  padding:100px;
+}
+
+.field{
+  width: 300px;
 }
