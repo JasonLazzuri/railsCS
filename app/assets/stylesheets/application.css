@@ -40,7 +40,7 @@ h3{
 .home{
   width: 150px;
   position: absolute;
-  left: -180px;
+  left: -7vw;
   top: 20px;
 }
 
@@ -264,4 +264,10 @@ h1.active,h2.active,h3.active,h4.active,h5.active{
 
 .field{
   width: 300px;
+}
+
+.dropdown-button{
+  position: absolute;
+  right: -7vw;
+  top: 10px;
 }
